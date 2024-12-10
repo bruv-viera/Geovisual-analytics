@@ -1,0 +1,161 @@
+html, body {
+font-size: 18px; 
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Appearance of the single story section */
+section {
+
+}
+
+/* Legend styling */
+#legend {
+  position: absolute;
+  width: 300px; 
+  background: white; 
+  padding: 10px; 
+  opacity: 0.9; 
+  border-width: 2px;
+  border-style: solid;
+  z-index: 10;
+}
+
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* Add margin-top to move the street line and label lower */
+.legend-symbol.street {
+  margin-top: 15px;  /* Adjust this value to move the street line down */
+}
+
+.legend-item.street {
+  margin-top: 10px;  /* Move the text "Street" down along with the symbol */
+}
+
+
+/* Styling for the legend symbol (line for streets) */
+.legend-symbol {
+  display: inline-block;
+  width: 30px; /* Default width */
+  height: 2px; /* Default height */
+  margin-right: 10px;
+}
+
+/* Specific styling for the street line */
+.legend-symbol.street {
+  width: 30px;  /* Longer line for street */
+  height: 1px;  /* Thicker line to represent a street */
+  background-color: #808080;  
+  border-radius: 2px;  /* Slight rounded edges */
+}
+
+/* Label for the legend */
+.legend-label {
+  font-size: 14px;
+}
+
+/* Finding styling */
+.finding-1 {
+  box-shadow: 0 -8px 0 YellowGreen inset; 
+  -webkit-box-shadow: 0 -8px 0 YellowGreen inset;
+}
+  
+.finding-2 {
+  box-shadow: 0 -7px teal inset; 
+  -webkit-box-shadow: 0 -7px 0 teal inset;
+}
+
+.finding-2 {
+box-shadow: 0 -7px teal inset; 
+-webkit-box-shadow: 0 -7px 0 teal inset;
+}
+
+
+
+
+
+#mapContainer svg {
+display: flex;
+  justify-content: center; /* Center the map horizontally */
+  align-items: flex-start; /* Align the map to the top or adjust based on need */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Button styling for Zoom In, Zoom Out, and Reset */
+#zoomInButton, #zoomOutButton, #resetButton {
+  position: absolute;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Times New Roman', serif;  /* Retaining your font-family */
+  background-color: #EBF0F0;
+  color: gray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 20;  /* Ensure buttons appear on top of map */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Position the buttons on the right side of the page and stack them */
+#zoomInButton {
+  top: 10px;
+  right: 10px;  /* Position on the right edge */
+  border-right: 10px;
+}
+
+#zoomOutButton {
+  top: 50px;
+  right: 10px;  /* Position on the right edge */
+  border-right: 10px;
+}
+
+#resetButton {
+  top: 90px;  /* Adjust position below zoom-out button */
+  right: 10px;  /* Position on the right edge */
+}
+
+/* Stacking buttons vertically */
+#zoomInButton, #zoomOutButton, #resetButton {
+  margin-bottom: 10px;  /* Space between buttons */
+}
+
+/* Hover effect for buttons */
+#zoomInButton:hover, #zoomOutButton:hover, #resetButton:hover {
+  background-color: #3f73cc; /* Change background on hover */
+  color: white;  /* Change text color to white when hovered */
+}
+
+
+
+#mapButtons {
+  position: absolute;
+  top: 50%;
+  right: 10px;  /* Adjust the distance from the right edge */
+  transform: translateY(-50%);  /* Center vertically */
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+
+
+
+div.tooltip {
+  width: 260px;
+  height: 100px;
+  padding: 12px 12px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 12px;
+  text-align: left;
+  color: black;
+  font-size: 12px;
+  font-style: italic;
+  filter: drop-shadow(6px 6px 4px gray); /* Drop shadow  around the tooltip using
+  (offset-x offset-y blur-radius color)*/
+}
